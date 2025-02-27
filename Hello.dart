@@ -1,20 +1,18 @@
-// sample dart code
-// main is the entry point for dart program
-main() {
-  print("Hello Muhammed");
+/// variable in dart
+
+void main() {
+  // every literal is a tye of supper class "Object"
+  // by default every custom and builtin classes
+  // are subclass of Object class which contains
+  // runtimetype, hashcode, toString(), ==
+  // and Static methods hash(), hashAll()
+
+  Object  obj = 1;
+  print(obj.runtimeType); // runtime type = int
+  print(obj.hashCode); // hashcode  number based
+  // on object memory address and vary with JVM variation.
+
+  print(Object.hash("a", 12));
+  print(Object.hashAll([1,2,3]));
+
 }
-
-// This single line comment
-
-/// This single line documentation comment
-
-
-/*
-This is
-block comment
- */
-
-/**
- * This is block documentation comment
- * "documentation comments are used to tell the about our code that can be processed by the ide for someone else "
- */
