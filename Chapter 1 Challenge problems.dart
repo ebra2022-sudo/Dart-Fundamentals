@@ -1,9 +1,17 @@
-/// Challenge Problem 1 :
+/// Challenge Problem 2
+/**
+ * Make iit compile:
+ * age = 16;
+ * print(age);
+ * age = 30;
+ * print(age);
+ *
+ */
 main() {
-  // initial number of dogs
-  int dogs = 0;
-  // add additional pet
-  print("Initial number of dogs: $dogs.");
-  dogs++;
-  print("Number of  dogs after additional pet: $dogs.");
+  // type annotation with int
+  // or type inference with var declaration;
+  int age = 16;
+  print(age);
+  age = 30;
+  print(age);
 }
