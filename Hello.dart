@@ -1,18 +1,23 @@
-/// Variable Rules in Dart
-/// Dart is both statically typed and
-/// Dynamically typed using {dynamic} keyword
+﻿import 'dart:io';
+
+// fibonacci in dart with iterative approach
 
 void main() {
-  /// Variable Declaration
-  /// Dart supports both type annotation and type inference using var or const
-  int a = 10; // type annotation
-  var b = 10;  // type inference with reassigning with the same inferred type
-               // infers based on the value but its type is dynamic until initialization
-  const pi = 3.1416; // type inference  without reassigning and the value must provided value mus be known at compile time,
-  final  k;
-  k = 12;
-  print(k);
+  int n= int.tryParse(stdin.readLineSync() ?? "") ?? 0;
 
-
-
+  if(n <= 2) {
+    print(1);
+  }
+  else {
+    int first = 1;
+    int second = 1;
+    int counter = n - 2;
+    while(counter > 0) {
+      int temp = first;
+      first = second;
+      second += temp;
+      counter--;
+    }
+    print(second);
+  }
 }
