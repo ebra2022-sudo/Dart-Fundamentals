@@ -3,21 +3,15 @@
 // fibonacci in dart with iterative approach
 
 void main() {
-  int n= int.tryParse(stdin.readLineSync() ?? "") ?? 0;
+  print(fullName("Muhammed", "Ebrahim"));
+}
 
-  if(n <= 2) {
-    print(1);
-  }
-  else {
-    int first = 1;
-    int second = 1;
-    int counter = n - 2;
-    while(counter > 0) {
-      int temp = first;
-      first = second;
-      second += temp;
-      counter--;
-    }
-    print(second);
+
+/// function declaration with optional and default values using square bracket
+String fullName(String first, String last, [String? title = "Student"]) {
+  if (title != null) {
+    return '$title $first $last';
+  } else {
+    return '$first $last';
   }
 }
