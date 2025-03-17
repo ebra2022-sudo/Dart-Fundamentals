@@ -1,17 +1,18 @@
-﻿import 'dart:io';
+﻿
 
 // fibonacci in dart with iterative approach
 
 void main() {
-  print(fullName("Muhammed", "Ebrahim"));
+  // new keyword is optional in dart
+  var user = User(); // without new, or
+  user = new User(); // with new keyword
+  user.name = "Muhammed";
+
 }
 
 
-/// function declaration with optional and default values using square bracket
-String fullName(String first, String last, [String? title = "Student"]) {
-  if (title != null) {
-    return '$title $first $last';
-  } else {
-    return '$first $last';
-  }
+/// In dart every properties of a class  had to be initialized by giving default value or via constructor
+class User {
+  int id = 0;
+  String name = "";
 }
