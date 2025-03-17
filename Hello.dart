@@ -7,6 +7,8 @@ void main() {
   var user = User(); // without new, or
   user = new User(); // with new keyword
   user.name = "Muhammed";
+  user.id = 1;
+  print(user);
 
 }
 
@@ -15,4 +17,10 @@ void main() {
 class User {
   int id = 0;
   String name = "";
+
+  // overriding the toString function of the parent "Object" class
+  @override
+  String toString() {
+    return "User(${this.id}, ${this.name})";
+  }
 }
