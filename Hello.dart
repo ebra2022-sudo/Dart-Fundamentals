@@ -13,6 +13,12 @@ void main() {
   print(user1);
   print(user2);
   print(user1 == user2);
+  print(user1.toJson());
+
+  // cascaded property assignment
+  User user3 = User()..id = 1 ..name = "Esmail";
+  print(user3);
+
 
 
 
@@ -36,5 +42,15 @@ class User {
     User another = other as User;
     // TODO: implement ==
     return this.name == another.name && this.id == another.id;
+  }
+
+  String toJson() {
+    return """
+    {
+      "id": $id,
+      "name": $name
+    }
+    """;
+
   }
 }
